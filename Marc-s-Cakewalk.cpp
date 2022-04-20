@@ -14,7 +14,8 @@ vector<string> split(const string &);
  */
 
 long marcsCakewalk(vector<int> calorie) {
-
+    long result {0};
+    return result;
 }
 
 int main()
