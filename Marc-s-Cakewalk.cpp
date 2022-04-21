@@ -13,8 +13,17 @@ vector<string> split(const string &);
  * The function accepts INTEGER_ARRAY calorie as parameter.
  */
 
-long marcsCakewalk(vector<int> calorie) {
+long marcsCakewalk(vector<int> calorie)
+{
     long result {0};
+    
+    std::sort(calorie.begin(), calorie.end(), greater<int>());
+    
+    for (int i = 0; i < calorie.size(); ++i)
+    {
+        result += std::pow(2, i) * calorie[i];
+    }
+        
     return result;
 }
 
@@ -87,4 +96,3 @@ vector<string> split(const string &str) {
 
     return tokens;
 }
-
