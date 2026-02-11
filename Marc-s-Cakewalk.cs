@@ -24,10 +24,19 @@ class Result
 
     public static long marcsCakewalk(List<int> calorie)
     {
+        calorie.Sort((a, b) => b.CompareTo(a));
+        
+        long miles = 0;
 
+        for (int i = 0; i < calorie.Count; i++)
+        {
+            miles += calorie[i] * (1L << i);
+        }
+
+        return miles;    
     }
-
 }
+
 
 class Solution
 {
