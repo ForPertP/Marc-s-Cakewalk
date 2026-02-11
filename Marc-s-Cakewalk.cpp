@@ -16,7 +16,7 @@ vector<string> split(const string &);
 long marcsCakewalk(vector<int> calorie) {
     sort(calorie.begin(), calorie.end(), greater<int>());
 
-    long long miles = 0;
+    long miles = 0;
     for (int i = 0; i < calorie.size(); ++i)
     {
         miles += calorie[i] * (1LL << i);
