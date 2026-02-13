@@ -19,7 +19,7 @@ long marcsCakewalk(vector<int> calorie) {
     long miles = 0;
     for (int i = 0; i < calorie.size(); ++i)
     {
-        miles += calorie[i] * (1LL << i);
+        miles += calorie[i] * (1L << i);
     }
 
     return miles;
